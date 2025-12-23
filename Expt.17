@@ -1,0 +1,6 @@
+library(waterfalls)
+profit_loss_data &lt;- data.frame(
+labels = c(&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;),
+values = c(100, -20, 50, -10, 80)
+)
+waterfall(profit_loss_data, fill_by_sign = TRUE)
