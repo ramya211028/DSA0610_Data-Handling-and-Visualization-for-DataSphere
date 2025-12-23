@@ -1,0 +1,11 @@
+library(hexbin)
+xy_data &lt;- data.frame(
+X = c(1, 2, 3, 4, 5, 6, 7, 8),
+Y = c(2, 3, 4, 5, 6, 7, 8, 9)
+)
+ggplot(xy_data, aes(x = X, y = Y)) +
+geom_hex() +
+labs(title = &quot;Hexbin Plot&quot;,
+x = &quot;X&quot;,
+y = &quot;Y&quot;) +
+theme_minimal()
