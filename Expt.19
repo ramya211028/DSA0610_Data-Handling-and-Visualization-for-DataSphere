@@ -1,0 +1,7 @@
+library(circlize)
+chord_data &lt;- data.frame(
+From = c(&quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;, &quot;C&quot;),
+To = c(&quot;B&quot;, &quot;C&quot;, &quot;C&quot;, &quot;D&quot;, &quot;D&quot;),
+Value = c(10, 20, 15, 25, 30)
+)
+chordDiagram(chord_data)
