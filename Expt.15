@@ -1,0 +1,11 @@
+sales_region_data &lt;- data.frame(
+Region = c(&quot;North&quot;, &quot;South&quot;, &quot;East&quot;, &quot;West&quot;),
+Sales = c(150, 200, 180, 210)
+)
+ggplot(sales_region_data, aes(x = Region, y = Sales)) +
+geom_segment(aes(x = Region, xend = Region, y = 0, yend = Sales), color = &quot;gray&quot;) +
+geom_point(color = &quot;blue&quot;, size = 5) +
+labs(title = &quot;Sales by Region&quot;,
+x = &quot;Region&quot;,
+y = &quot;Sales&quot;) +
+theme_minimal()
