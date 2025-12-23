@@ -1,0 +1,17 @@
+library(lubridate)
+library(ggplot2)
+activity_data &lt;- data.frame(
+Date = as.Date(c(&quot;2023-01-01&quot;, &quot;2023-01-02&quot;, &quot;2023-01-03&quot;, &quot;2023-01-04&quot;, &quot;2023-01-
+05&quot;)),
+Count = c(10, 12, 15, 8, 20)
+)
+activity_data$Weekday &lt;- wday(activity_data$Date, label = TRUE)
+activity_data$Week &lt;- week(activity_data$Date)
+ggplot(activity_data, aes(x = Weekday, y = Week, fill = Count)) +
+geom_tile(color = &quot;white&quot;) +
+scale_fill_gradient(low = &quot;white&quot;, high = &quot;blue&quot;) +
+labs(title = &quot;Daily Activity Count&quot;,
+x = &quot;Weekday&quot;,
+y = &quot;Week&quot;,
+fill = &quot;Count&quot;) +
+theme_minimal()
